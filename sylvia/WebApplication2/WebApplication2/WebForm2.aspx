@@ -14,8 +14,8 @@
 </head>
 <body class="page_body">
     
-    <div class="container page_body" >
-        <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container" >
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -36,11 +36,45 @@
         <li><a href="#">Recommendation List</a></li>
         <li><a href="#">Rubik's cube scoreboard</a></li>
      </ul>
-   <div class="text-right"> Welcome achyut</div>
+  
     
   </div><!-- /.navbar-collapse -->
 </nav>
    
+   <div class="block_wrapper col-md-3">
+   <div class="block_header">
+   this is heading
+   </div>
+   <div class="block">
+   <ul class="list-group">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+   </div>
+   
+   </div>
+    <div class="block_wrapper col-md-5">
+   <div class="block">
+   <div class="well">this is a post</div>
+   </div>
+   
+   </div>
+    <div class="block_wrapper col-md-3">
+   <div class="block">
+   <ul class="list-group">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+   </div>
+   
+   </div>
+
     </div>
     
 </body>

@@ -1,11 +1,42 @@
-﻿.login {
+﻿html
+{
+    font-size:10px!important;
+}
+
+.login {
     margin-top: 5%;
 }
 
-html { 
-  background: url(images/bg.jpg) no-repeat center center fixed!important; 
+.page_body { 
+  background: url(/images/walle.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.block_wrapper
+{
+  box-shadow: 0 0 10px .1px;
+  height:350px;
+  background-color:rgba(230,232,250,0.5);
+  margin-top:8%;
+  margin-left:20px;
+
+}
+
+    
+.block
+{
+    background-color:rgba(255,255,255,0);
+    margin-top:10px;
+    padding:10px;
+    
+    
+}
+
+.block_header
+{
+    padding:10px 10px 10px 10px;
+    background-color:rgba(255,255,255,0.9)
 }
