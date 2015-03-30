@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApplication2.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="WebApplication2.WebForm3" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>page</title>
+    <title>scoreboard</title>
      <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
@@ -13,7 +13,6 @@
         <script src="js/bootstrap.js" type="text/javascript"></script>
 </head>
 <body class="page_body">
-    
     <div class="container" >
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,48 +39,9 @@
     
   </div><!-- /.navbar-collapse -->
 </nav>
-   
-   <div class="block_wrapper col-md-3">
-   <div class="block_header row text-center">
-   To Do List
-   </div>
-   <div class="block">
-   <ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-   </div>
-   
-   </div>
-    <div class="block_wrapper col-md-5">
-    <div class="block_header row text-center">
-   Posts
-   </div>
-   <div class="block">
-   <div class="well">Post</div>
-   </div>
-   
-   </div>
-    <div class="block_wrapper col-md-3">
-    <div class="block_header row text-center">
-   Check this out!
-   </div>
-   <div class="block">
-   <ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-   </div>
-   
-   </div>
-
-    </div>
-    
+ <div class="block_wrapper">
+ 
+ </div>
+</div>
 </body>
 </html>

@@ -37,6 +37,13 @@
 
 .block_header
 {
-    padding:10px 10px 10px 10px;
-    background-color:rgba(255,255,255,0.9)
+    padding:20px 10px 20px 10px;
+   
+    background-color:Black;
+    color:White;
+}
+.block_header:hover
+{
+    background-color:rgba(255,255,255,0.4);
+    color:black;
 }
