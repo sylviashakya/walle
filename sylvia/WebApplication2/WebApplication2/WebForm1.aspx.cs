@@ -36,12 +36,16 @@ namespace WebApplication2
                 myReader = new SqlDataAdapter(myCommand);
                 myset = new DataSet();
                 myReader.Fill(myset);
+                SqlDataReader reader = myCommand.ExecuteReader();
                 if (myset.Tables[0].Rows.Count > 0)
                 {
-                    Response.Redirect("WebForm2.aspx");
+                    Session["user"] = a;
+                    while (reader.Read())
+                    Session["userid"] = Convert.ToString(reader["UserID"]);
+                    Response.Redirect("home.aspx");
                 }
                 else
-                    Label1.Text = "Incorrect ach! :P";
+                    Label1.Text = "Incorrect";
                 
             }
             catch (Exception)

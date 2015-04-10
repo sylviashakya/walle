@@ -40,7 +40,15 @@
     
   </div><!-- /.navbar-collapse -->
 </nav>
-   
+<form id="form1" runat="server">
+   <div class="jumbotron">
+  <h1>Hello <asp:Label ID="usern" runat="server" Text=""></asp:Label></h1>
+       
+  <p>Your are <asp:Label ID="p1" runat="server" Text=""></asp:Label> and <asp:Label ID="p2" runat="server" Text=""></asp:Label>.</p>
+       
+  <p><asp:Button ID="Button1" runat="server" CssClass="btn btn-primary btn-lg" 
+          Text="Logout" onclick="Button1_Click" /></p>
+</div>
    <div class="block_wrapper col-md-3">
    <div class="block_header row text-center">
    To Do List
@@ -80,7 +88,7 @@
    </div>
    
    </div>
-
+   </form>
     </div>
     
 </body>
