@@ -25,7 +25,6 @@ namespace WebApplication2
             DataSet myset = new DataSet();
             string a = txtusername.Text;
             string b = txtpassword.Text;
-
             String strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
             cnn = new SqlConnection(strConnString);
             try
@@ -41,16 +40,18 @@ namespace WebApplication2
                 {
                     Session["user"] = a;
                     while (reader.Read())
-                    Session["userid"] = Convert.ToString(reader["UserID"]);
+                        Session["userid"] = Convert.ToString(reader["UserID"]);
                     Response.Redirect("home.aspx");
                 }
                 else
-                    Label1.Text = "Incorrect";
-                
+                    Label1.Text = "Incorrect username or password. Try again.";
+                Label1.Visible = true;
+
             }
             catch (Exception)
             {
                 Label1.Text = "error";
+                Label1.Visible = true;
             }
         }
     }

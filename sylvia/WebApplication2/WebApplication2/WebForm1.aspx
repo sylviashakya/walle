@@ -27,10 +27,14 @@
   </div>
       
    <p><asp:Button ID="Button1" runat="server" class="btn btn-success btn-lg" 
-           Text="Login" onclick="Button1_Click"/></p>
+           Text="Login" onclick="Button1_Click"/>
+           <br />
+       <asp:Label ID="Label1" runat="server" Visible="false" Text="Label"></asp:Label>
+           
+           </p>
       
 </div>
- <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
    
    </form>
           </div>

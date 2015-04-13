@@ -16,20 +16,23 @@ namespace WebApplication2
             {
                 Response.Redirect("WebForm1.aspx");
             }
-            SqlConnection cnn;
-            String strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
-            cnn = new SqlConnection(strConnString);
-            cnn.Open();
-            string query = "select * from rubix"; 
-            SqlCommand myCommand = new SqlCommand(query, cnn);
+            if (!IsPostBack)
+            {
+                SqlConnection cnn;
+                String strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+                cnn = new SqlConnection(strConnString);
+                cnn.Open();
+                string query = "select * from rubix";
+                SqlCommand myCommand = new SqlCommand(query, cnn);
                 SqlDataReader reader = myCommand.ExecuteReader();
 
                 while (reader.Read())
                 {
-                      snum.Text = Convert.ToString(reader["snum"]);
-                      anum.Text = Convert.ToString(reader["anum"]);
+                    snum.Text = Convert.ToString(reader["snum"]);
+                    anum.Text = Convert.ToString(reader["anum"]);
                 }
                 reader.Close();
+            }
         }
 
         void updatescore()
@@ -38,31 +41,44 @@ namespace WebApplication2
             String strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
             cnn = new SqlConnection(strConnString);
             cnn.Open();
-            string query = "UPDATE rubix SET snum = "+ snum.Text + ", anum = " + anum.Text ;
+            int n1 = Convert.ToInt32(snum.Text);
+            int n2= Convert.ToInt32(anum.Text);
+                       
+            string query = "UPDATE rubix SET snum = " + n1  + " , anum = "+ n2;
             SqlCommand myCommand = new SqlCommand(query, cnn);
             SqlDataReader reader = myCommand.ExecuteReader();
 
         }
 
-
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
+            int n1 = Convert.ToInt32(snum.Text) - 1;
+            snum.Text = n1.ToString();
             updatescore();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            int n1 = Convert.ToInt32(snum.Text) + 1;
+            snum.Text = n1.ToString();
             updatescore();
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            int n1 = Convert.ToInt32(anum.Text) - 1;
+            anum.Text = n1.ToString();
             updatescore();
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
+            int n1 = Convert.ToInt32(anum.Text) + 1;
+            anum.Text = n1.ToString();
             updatescore();
         }
+
+
     }
 }
